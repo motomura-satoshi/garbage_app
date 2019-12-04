@@ -1,6 +1,6 @@
 <h1>Garbages#new</h1>
 
-<%= form_with url: '/garbages', method: :post, local: true do |form| %>
+<%= form_with model: @garbage, url: '/garbages', method: :post, local: true do |form| %>
   <div>
   <label>種類</label>
   <%= form.text_field :title %>

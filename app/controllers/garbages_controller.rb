@@ -4,13 +4,14 @@ class GarbagesController < ApplicationController
   end
 
   def new
+    @garbage = Garbage.new
   end
 
   def create
     garbage = Garbage.new
-    garbage.title = params[:title]
-    garbage.week = params[:week]
-    garbage.alarm_time = params[:alarm_time]
+    garbage.title = params[:garbage][:title]
+    garbage.week = params[:garbage][:week]
+    garbage.alarm_time = params[:garbage][:alarm_time]
     garbage.save
     redirect_to '/garbages'
   end
@@ -21,9 +22,9 @@ class GarbagesController < ApplicationController
 
   def update
     garbage = Garbage.find(params[:id])
-    garbage.title = params[:title]
-    garbage.week = params[:week]
-    garbage.alarm_time = params[:alarm_time]
+    garbage.title = params[:garbage][:title]
+    garbage.week = params[:garbage][:week]
+    garbage.alarm_time = params[:garbage][:alarm_time]
     garbage.save
     redirect_to '/garbages'
   end

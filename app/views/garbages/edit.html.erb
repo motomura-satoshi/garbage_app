@@ -1,19 +1,19 @@
 <h1>ゴミ出し編集</h1>
 
-<%= form_with url: "/garbages/#{@garbage.id}", method: :patch, local: true do |form| %>
+<%= form_with model: @garbage, url: "/garbages/#{@garbage.id}", method: :patch, local: true do |form| %>
   <div>
   <label>種類</label>
-  <%= form.text_field :title, value: @garbage.title %>
+  <%= form.text_field :title %>
   </div>
 
   <div>
   <label>収集日</label>
-  <%= form.text_field :week, value: @garbage.week %>
+  <%= form.text_field :week %>
   </div>
 
   <div>
   <label>時間</label>
-  <%= form.time_field :alarm_time, value: @garbage.alarm_time %>
+  <%= form.time_field :alarm_time %>
   </div>
 
   <%= form.submit '更新する' %>
