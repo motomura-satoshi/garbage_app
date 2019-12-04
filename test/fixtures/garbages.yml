@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  week: MyString
+  alarm_time: 2019-11-20 18:42:45
+
+two:
+  title: MyString
+  week: MyString
+  alarm_time: 2019-11-20 18:42:45

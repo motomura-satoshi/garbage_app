@@ -1,0 +1,21 @@
+<h1>Garbages#new</h1>
+
+<%= form_with url: '/garbages', method: :post, local: true do |form| %>
+  <div>
+  <label>種類</label>
+  <%= form.text_field :title %>
+  </div>
+
+  <div>
+  <label>収集日</label>
+  <%= form.text_field :week %>
+  </div>
+
+
+  <div>
+  <label>時間</label>
+  <%= form.time_field :alarm_time %>
+  </div>
+
+  <%= form.submit '保存' %>
+<% end %>

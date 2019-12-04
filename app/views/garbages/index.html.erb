@@ -1,0 +1,12 @@
+<h1>Garbages#index</h1>
+
+<% @garbages.each do |garbage| %>
+  <div>
+    <%= garbage.title %>
+    <%= garbage.week %>
+    <%= garbage.alarm_time %>
+    <%= link_to '編集', controller: :garbages, action: :edit, id: garbage.id %>
+  </div>
+<% end %>
+
+<a href="/garbages/new">新規</a>
