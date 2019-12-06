@@ -1,21 +1,12 @@
-<h1>Garbages#new</h1>
+<h1>ゴミ出し新規登録</h1>
 
-<%= form_with model: @garbage, url: '/garbages', method: :post, local: true do |form| %>
-  <div>
-  <label>種類</label>
-  <%= form.text_field :title %>
-  </div>
-
-  <div>
-  <label>収集日</label>
-  <%= form.text_field :week %>
-  </div>
-
-
-  <div>
-  <label>時間</label>
-  <%= form.time_field :alarm_time %>
-  </div>
-
-  <%= form.submit '保存' %>
-<% end %>
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <%= form_with model: @garbage, url: '/garbages', method: :post, local: true do |form| %>
+      <li class="list-group-item">種類 <%= form.text_field :title %></li>
+      <li class="list-group-item">収集日 <%= form.text_field :week %></li>
+      <li class="list-group-item">時間 <%= form.time_field :alarm_time %></li>
+      <li class="list-group-item"><%= form.submit '保存' %></li>
+    <% end %>
+  </ul>
+</div>
